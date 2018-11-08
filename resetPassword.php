@@ -41,7 +41,7 @@
  						$query = "UPDATE `usertable` SET password ='".md5(md5($row['id']).$_POST['password'])."' WHERE id='".$row['id']."' LIMIT 1";
  						mysqli_query($link, $query);
 
- 						$success = "Your password changed sucessfully <a href=\"http://matchanyckeln-com.stackstaging.com/index.php\">click here to login</a>.";
+ 						$success = "Your password changed sucessfully <a href=\"http://keybase-com.sites.stackstaging.com/index.php\">click here to login</a>.";
 
  						$to=$_POST['email'];
  						$subject="Your Keybase password has been changed";
@@ -58,7 +58,7 @@
  					}
  					else
  					{
- 						$error = 'Invalid key please try again. <a href="http://matchanyckeln-com.stackstaging.com/index.php">KeyBase</a>';
+ 						$error = 'Invalid key please try again. <a href="http://keybase-com.sites.stackstaging.com/index.php">KeyBase</a>';
  					}
  				}
  			}
@@ -66,7 +66,7 @@
  		}
  		else
  		{
- 			$error = 'Invalid key please try again later. <a href="http://matchanyckeln-com.stackstaging.com/index.php">KeyBase</a>';
+ 			$error = 'Invalid key please try again later. <a href="http://keybase-com.sites.stackstaging.com/index.php">KeyBase</a>';
  		}
  	}
  }

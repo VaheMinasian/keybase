@@ -75,7 +75,7 @@ if(array_key_exists("submit", $_POST)){
 					$to=$_POST['email'];
 					$subject="Your password reset link";
 					$from = 'Keybase-no-reply';
-					$body='Hi '.$row['name'].',<br><br> We received a password change request from your email address. If it wasn\'t you who requested this change, then simply ignore this email.<br> We apologize for inconvenience. <br><br><strong> If it was you who requested a password reset then please click the following link to reset your password</strong> http://key-com.stackstaging.com/resetPassword.php?encrypt='.$encrypt.'&action=reset   <br><br>'."\r\n";
+					$body='Hi '.$row['name'].',<br><br> We received a password change request from your email address. If it wasn\'t you who requested this change, then simply ignore this email.<br> We apologize for inconvenience. <br><br><strong> If it was you who requested a password reset then please click the following link to reset your password</strong> http://keybase-com.sites.stackstaging.com/resetPassword.php?encrypt='.$encrypt.'&action=reset   <br><br>'."\r\n";
 
 					$headers = "From: " . strip_tags($from) . "\r\n";
 					$headers .= "Reply-To: ". strip_tags($from) . "\r\n";

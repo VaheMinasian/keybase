@@ -32,7 +32,7 @@
  					$query = "UPDATE `usertable` SET password = '".md5(md5($row['id']).$_POST['password'])."', state = '".$active."' WHERE email='".mysqli_real_escape_string($link, $_POST['email'])."' LIMIT 1";
 					mysqli_query($link, $query);
 
- 					$success = "account activation successful! <a href=\"http://key-com.stackstaging.com/index.php\">click here to login</a>.";
+ 					$success = "account activation successful! <a href=\"http://keybase-com.sites.stackstaging.com/index.php\">click here to login</a>.";
 
  					$to=$_POST['email'];
  					$subject="Your Keybase password has been changed";
