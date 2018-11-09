@@ -73,7 +73,7 @@ if(array_key_exists("addEntry", $_POST)){
 	}
 	}// Users tab
 	else if(array_key_exists("addUser", $_POST)){
-		if((!$_POST['email']) && (!$_POST['name']) && (!$_POST['levelgroup'])){
+		if((!$_POST['email']) || (!$_POST['name']) || (!$_POST['levelgroup'])){
 			$dangerAlert .= "email, name and level fields are required";
 		} else {
 			$query = "SELECT * FROM `usertable` WHERE email = '".mysqli_real_escape_string($link, $_POST['email'])."' LIMIT 1";
@@ -100,7 +100,7 @@ if(array_key_exists("addEntry", $_POST)){
 				$to= $_POST['email'];
 				$subject = "Welcome to keybase";
 				$from = 'Keybase-no-reply';
-				$body='Hi '.$_POST['name'].',<br><br> We give you a warm welcome on joining our team.<br> use your email as login to our website.<br><br> Please click the following link to reset your password</strong> http://key-com.stackstaging.com/activateAccount.php?encrypt='.$token.'&action=reset   <br><br>'."\r\n";
+				$body='Hi '.$_POST['name'].',<br><br> We give you a warm welcome on joining our team.<br> use your email as login to our website.<br><br> Please click the following link to reset your password</strong> http://keybase-com.sites.stackstaging.com/activateAccount.php?encrypt='.$token.'&action=reset   <br><br>'."\r\n";
 
 				$headers = "From: " . strip_tags($from) . "\r\n";
 				$headers .= "Reply-To: ". strip_tags($from) . "\r\n";

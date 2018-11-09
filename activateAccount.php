@@ -48,13 +48,13 @@
  				}
  				else
  				{
- 					$error = 'reset link expired. <a href="http://key-com.stackstaging.com/index.php">KeyBase</a>';
+ 					$error = 'reset link expired. <a href="http://keybase-com.sites.stackstaging.com/index.php">KeyBase</a>';
  				}	
  			}
  		}
  		else
  		{
- 			$error = 'Invalid link please try again later. <a href="http://key-com.stackstaging.com/index.php">KeyBase</a>';
+ 			$error = 'Invalid link please try again later. <a href="http://keybase-com.sites.stackstaging.com/index.php">KeyBase</a>';
  		}
  	}
  }
